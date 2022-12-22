@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="landing">
+    <div class="landing_left">
+        <div class="main_button">
+            <a href={{url_for('video')}} target="_blank">
+                <button class='homebtn1 btn-info' type="button">
+                    Notify me
+                </button>
+            </a>
+        </div>
+        <div class="main_button">
+            <a href={{url_for('drowsy')}} target="_blank">
+                <button class='homebtn2 btn-info' type="button">
+                    Alert me
+                </button>
+            </a>
+        </div>
+        <div class="main_button">
+            <a href={{url_for('predict')}} target="_blank">
+                <button class='homebtn3 btn-info' type="button">
+                    Test With Images
+                </button>
+            </a>
+        </div>
+        <div class="intro">
+            <h1> --PriorSender-- </h1>
+            <h3> Designed for you!! </h3>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tip of the day</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h3>{{quote_h}}</h3>
+                {{quote_b}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

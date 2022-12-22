@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="video">
+        <img src={{url_for('video_feed2')}} onload="imageloaded();"/>
+        <h1 id='feed' class="centered">Loading Live Feed</h1>
+        <div id='fancy-spinner' class="fancy-spinner precentered" >
+            <div id='ring' class="ring"></div>
+            <div id='ring' class="ring"></div>
+            <div id='dot'  class="dot"></div>
+        </div>
+    </div>
+
+
+
+
+{% endblock content %}
